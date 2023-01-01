@@ -23,5 +23,9 @@ dev-dependency和dependency的区别是前者不会打包到生产环境 一般�
 yarn add antd --save
 npm install antd --save --registry=https://registry.npm.taobao.org
 npm install --save @ant-design/icons
+
+#按需引入
+npm install vite-plugin-style-import@1.4.1 -D
+npm i less@2.7.1 -D
 ```
 
