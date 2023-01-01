@@ -7,7 +7,7 @@ import Component2 from './components/Component2/Component2'
 import {Button} from 'antd'
 import {UpCircleOutlined} from '@ant-design/icons'
 
-import {Outlet} from 'react-router-dom'
+import {Outlet, Link} from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +15,13 @@ function App() {
   return (
     <div className="App">
       APP
+
+      <Link to={"/home"}>Home</Link>
+      
+      <Link to={"/about"}>About</Link>
+      {/**
+       * 占位符组件 类似于窗口 用于展示组件 类似于vue的router-view
+       */}
       <Outlet></Outlet>
     </div>
   )
