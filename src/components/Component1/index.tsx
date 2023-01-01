@@ -1,8 +1,8 @@
-import "./style.scss"
+import styles from  "./component.module.scss"
 
 function Component1 () {
     return (
-        <div className="box">
+        <div className={styles.box}>
             <p>Component1</p>
         </div>
     )
