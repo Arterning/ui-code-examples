@@ -1,0 +1,12 @@
+$color: #fcf;
+body {
+    background-color: $color;
+
+    // disable text selection
+    user-select: none;
+}
+
+img {
+    //disable drag image
+    -webkit-user-drag: none;
+}
