@@ -7,16 +7,15 @@ import Component2 from './components/Component2/Component2'
 import {Button} from 'antd'
 import {UpCircleOutlined} from '@ant-design/icons'
 
+import {Outlet} from 'react-router-dom'
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      Ning
-      <Component1/>
-      <Component2/>
-      <Button type='primary'>Primary Button</Button>
-      <UpCircleOutlined/>
+      APP
+      <Outlet></Outlet>
     </div>
   )
 }
