@@ -2,6 +2,7 @@ import React, {lazy} from 'react'
 
 import App from "@/App";
 import Home from '@/views/Home';
+import Login from '@/views/Login';
 
 const About = lazy(() => import("@/views/About"))
 const Ning = lazy(() => import("@/views/Ning"))
@@ -42,6 +43,11 @@ const route = [
                 element: LazyLoad(<Default/>)
             }
         ]
+    },
+    // 嵌套路由结束
+    {
+        path: '/login',
+        element: <Login />
     },
     {
         path: "*",
