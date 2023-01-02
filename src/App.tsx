@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 
 import Component1 from './components/Component1'
-import Component2 from './components/Component2/Component2'
+import Component2 from './components/Component2'
 
 import {Button} from 'antd'
 import {UpCircleOutlined} from '@ant-design/icons'
