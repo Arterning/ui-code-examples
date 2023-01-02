@@ -6,8 +6,9 @@ import Home from '@/views/Home';
 const About = lazy(() => import("@/views/About"))
 const Ning = lazy(() => import("@/views/Ning"))
 const File = lazy(() => import("@/components/Component1"))
+const Default = lazy(() => import("@/components/Component2"))
 
-import {BrowserRouter, Route, Routes, Navigate} from 'react-router-dom'
+import {Navigate} from 'react-router-dom'
 
 const LazyLoad = (component:JSX.Element) => (
     <React.Suspense fallback={<div>Loading...</div>}>
@@ -35,8 +36,16 @@ const route = [
             {
                 path: "/file",
                 element: LazyLoad(<File/>)
+            },
+            {
+                path: "/default",
+                element: LazyLoad(<Default/>)
             }
         ]
+    },
+    {
+        path: "*",
+        element: <Navigate to={"/default"}/>
     }
 ]
 
