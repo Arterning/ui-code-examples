@@ -5,6 +5,7 @@ import Home from '@/views/Home';
 
 const About = lazy(() => import("@/views/About"))
 const Ning = lazy(() => import("@/views/Ning"))
+const File = lazy(() => import("@/components/Component1"))
 
 import {BrowserRouter, Route, Routes, Navigate} from 'react-router-dom'
 
@@ -30,6 +31,10 @@ const route = [
             {
                 path: "/ning",
                 element: LazyLoad(<Ning/>)
+            },
+            {
+                path: "/file",
+                element: LazyLoad(<File/>)
             }
         ]
     }

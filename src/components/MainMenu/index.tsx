@@ -30,13 +30,16 @@ function getItem(
 const items: MenuItem[] = [
   getItem('about', '/about', <PieChartOutlined />),
   getItem('ning', '/ning', <DesktopOutlined />),
+  getItem('Files', '/file', <FileOutlined />),
   getItem('User', 'user', <UserOutlined />, [
-    getItem('Tom', '3'),
-    getItem('Bill', '4'),
-    getItem('Alex', '5'),
+    getItem('Tom', '/tom'),
+    getItem('Bill', '/bill'),
+    getItem('Alex', '/alex'),
   ]),
-  getItem('Team', 'team', <TeamOutlined />, [getItem('Team 1', '6'), getItem('Team 2', '8')]),
-  getItem('Files', 'file', <FileOutlined />),
+  getItem('Team', 'team', <TeamOutlined />, [
+    getItem('Team 1', '/team1'), 
+    getItem('Team 2', '/team2')
+  ]),
 ];
 
 const MainMenu = () => {
