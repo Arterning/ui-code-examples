@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom/client'
 import 'reset-css';
 
 //UI框架的样式
-// import 'antd/dist/antd.css';
+import 'antd/dist/antd.css';
 
 //global style
 import "@/assets/styles/global.scss";
