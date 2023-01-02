@@ -46,8 +46,24 @@ const MainMenu = () => {
 const navigate = useNavigate();
 const currentRoute = useLocation();
 
+let firstOpenKey:string = '';
 
-const [openKeys, setOpenKeys] = useState(['']);
+// 在这里进行对比
+function findKey(obj:{key:string}) {
+    return obj.key === currentRoute.pathname
+}
+
+// 多对比的是多个children
+for(let i=0; i<items.length; i++){
+    // 判断找到找不到
+    // items[i]!['children'] 表示开发者肯定items[i] is not null
+    if(items[i]!['children'] && items[i]!['children'].length > 0 && items[i]!['children'].find(findKey)){
+        firstOpenKey = items[i]!.key as string
+        break
+    }
+}
+
+const [openKeys, setOpenKeys] = useState([firstOpenKey]);
   
 
 const menuClick = (e:{key:string}) => {
@@ -61,7 +77,7 @@ const menuClick = (e:{key:string}) => {
     //设置只能展开一个菜单
     setOpenKeys([keys[keys.length -1]])
   }
-    return (
+  return (
         <Menu 
           theme="dark" 
           defaultSelectedKeys={[currentRoute.pathname]}
