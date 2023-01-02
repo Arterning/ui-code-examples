@@ -6,7 +6,7 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
-import {Outlet,  useNavigate} from 'react-router-dom';
+import {Outlet,  useNavigate, useLocation} from 'react-router-dom';
 import React, { useState } from 'react';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
 
@@ -44,11 +44,13 @@ const items: MenuItem[] = [
 
 const MainMenu = () => {
 const navigate = useNavigate();
+const currentRoute = useLocation();
 
-  const [openKeys, setOpenKeys] = useState(['']);
+
+const [openKeys, setOpenKeys] = useState(['']);
   
 
-  const menuClick = (e:{key:string}) => {
+const menuClick = (e:{key:string}) => {
     
     navigate(e.key)
   }
@@ -62,7 +64,7 @@ const navigate = useNavigate();
     return (
         <Menu 
           theme="dark" 
-          defaultSelectedKeys={['/ning']}
+          defaultSelectedKeys={[currentRoute.pathname]}
           mode="inline" 
           items={items} 
           onClick={menuClick}
