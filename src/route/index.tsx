@@ -7,6 +7,12 @@ const Home = lazy(() => import("@/views/Home"))
 
 import {BrowserRouter, Route, Routes, Navigate} from 'react-router-dom'
 
+const LazyLoad = (component:JSX.Element) => (
+    <React.Suspense fallback={<div>Loading...</div>}>
+        {component}
+    </React.Suspense>
+)
+
 const route = [
     {
         path: '/',
@@ -14,15 +20,11 @@ const route = [
     },
     {
         path: '/home',
-        element: <React.Suspense fallback={<div>Loading...</div>}>
-        <Home/>
-    </React.Suspense>
+        element: LazyLoad(<Home/>)
     },
     {
         path: '/about',
-        element: <React.Suspense fallback={<div>Loading...</div>}>
-            <About/>
-        </React.Suspense>
+        element: LazyLoad(<About/>)
     }
 ]
 
