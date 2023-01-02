@@ -9,7 +9,7 @@ import {
 import type { MenuProps } from 'antd';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
 
-import {useNavigate} from 'react-router-dom'
+import {Outlet,  useNavigate} from 'react-router-dom'
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -30,8 +30,8 @@ function getItem(
 }
 
 const items: MenuItem[] = [
-  getItem('Option 1', '/page1', <PieChartOutlined />),
-  getItem('Option 2', '/page2', <DesktopOutlined />),
+  getItem('about', '/about', <PieChartOutlined />),
+  getItem('ning', '/ning', <DesktopOutlined />),
   getItem('User', 'sub1', <UserOutlined />, [
     getItem('Tom', '3'),
     getItem('Bill', '4'),
@@ -65,7 +65,7 @@ const Home: React.FC = () => {
           </Breadcrumb>
         </Header>
         <Content style={{ margin: '16px 16px' }} className="site-layout-background">
-          
+          <Outlet/>
         </Content>
         <Footer style={{ textAlign: 'center' , padding: 0, lineHeight: '48px'}}>Ant Design ©2018 Created by Ant UED</Footer>
       </Layout>
