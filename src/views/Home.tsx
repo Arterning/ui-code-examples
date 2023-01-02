@@ -49,17 +49,16 @@ const Home: React.FC = () => {
         <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items} />
       </Sider>
       <Layout className="site-layout">
-        <Header className="site-layout-background" style={{ padding: 0 }}/>
-        <Content style={{ margin: '0 16px' }}>
-          <Breadcrumb style={{ margin: '16px 0' }}>
+        <Header className="site-layout-background" style={{ paddingLeft: '16px' }}>
+        <Breadcrumb style={{ margin: '16px 0' , lineHeight: '64px'}}>
             <Breadcrumb.Item>User</Breadcrumb.Item>
             <Breadcrumb.Item>Bill</Breadcrumb.Item>
           </Breadcrumb>
-          <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
-            Bill is a cat.
-          </div>
+        </Header>
+        <Content style={{ margin: '16px 16px' }} className="site-layout-background">
+          
         </Content>
-        <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+        <Footer style={{ textAlign: 'center' , padding: 0, lineHeight: '48px'}}>Ant Design ©2018 Created by Ant UED</Footer>
       </Layout>
     </Layout>
   );
