@@ -1,6 +1,9 @@
+import React, {lazy} from 'react'
+
 import App from "@/App";
-import Home from "@/views/Home";
-import About from "@/views/About";
+
+const About = lazy(() => import("@/views/About"))
+const Home = lazy(() => import("@/views/Home"))
 
 import {BrowserRouter, Route, Routes, Navigate} from 'react-router-dom'
 
@@ -11,11 +14,15 @@ const route = [
     },
     {
         path: '/home',
-        element: <Home/>
+        element: <React.Suspense fallback={<div>Loading...</div>}>
+        <Home/>
+    </React.Suspense>
     },
     {
         path: '/about',
-        element: <About/>
+        element: <React.Suspense fallback={<div>Loading...</div>}>
+            <About/>
+        </React.Suspense>
     }
 ]
 
