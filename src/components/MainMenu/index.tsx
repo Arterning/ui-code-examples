@@ -31,6 +31,7 @@ const items: MenuItem[] = [
   getItem('about', '/about', <PieChartOutlined />),
   getItem('ning', '/ning', <DesktopOutlined />),
   getItem('Files', '/file', <FileOutlined />),
+  getItem('pageOne', '/page-one', <FileOutlined />),
   getItem('User', 'user', <UserOutlined />, [
     getItem('Tom', '/tom'),
     getItem('Bill', '/bill'),

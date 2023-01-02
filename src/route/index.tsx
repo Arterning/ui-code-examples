@@ -9,6 +9,8 @@ const Ning = lazy(() => import("@/views/Ning"))
 const File = lazy(() => import("@/components/Component1"))
 const Default = lazy(() => import("@/components/Component2"))
 
+const PageOne = lazy(() => import("@/views/PageOne"))
+
 import {Navigate} from 'react-router-dom'
 
 const LazyLoad = (component:JSX.Element) => (
@@ -41,6 +43,10 @@ const route = [
             {
                 path: "/default",
                 element: LazyLoad(<Default/>)
+            },
+            {
+                path: "/page-one",
+                element: LazyLoad(<PageOne/>)
             }
         ]
     },
