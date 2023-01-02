@@ -17,12 +17,6 @@ function App() {
 
   return (
     <div className="App">
-      APP Component |
-
-      <Link to={"/home"}>Home</Link> |
-      
-      <Link to={"/about"}>About</Link> |
-      
       {outlet}
     </div>
   )

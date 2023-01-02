@@ -39,7 +39,7 @@ const items: MenuItem[] = [
   getItem('Files', '9', <FileOutlined />),
 ];
 
-const App: React.FC = () => {
+const Home: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false);
 
   return (
@@ -65,4 +65,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default Home;
