@@ -23,11 +23,16 @@ fs.readFile('../file/1.html',(err, data1) => {
 
 async function readFile() {
 
-    const data1 = await mineReadFile('../file/1.html');
-    const data2 = await mineReadFile('../file/2.html');
-    const data3 = await mineReadFile('../file/3.html');
-
-    console.log(data1 + ',' + data2 + ',' + data3);
+    try {
+        const data1 = await mineReadFile('../file/1.html');
+        const data2 = await mineReadFile('../file/2.html');
+        const data3 = await mineReadFile('../file/3.html'); 
+        //const data4 = await mineReadFile('../file/4.html'); 
+        console.log(data1 + ',' + data2 + ',' + data3);
+    } catch (error) {
+        console.log(error);
+    }
+   
 }
 
 readFile();
