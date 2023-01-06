@@ -4,8 +4,7 @@ let p = new Promise((resolve, reject) => {
 
     fs.readFile('../file/content.txt', (err, data) => {
         if (err) reject(err);
-
-        resolve(data);
+        else resolve(data);
     })
 });
 
