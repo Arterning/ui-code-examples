@@ -1,0 +1,25 @@
+{
+    "posts": [
+      { "id": 1, "title": "json-server", "author": "typicode" }
+    ],
+    "comments": [
+      { "id": 1, "body": "some comment", "postId": 1 }
+    ],
+    "profile": { "name": "typicode" },
+    "girl": [
+        {
+            "id": 1,
+            "name":"大波妹 佳佳",
+            "size":"D 罩杯",
+            "age": 18,
+            "height": "165cm"
+        },
+        {
+            "id": 2,
+            "name":"大波妹 欣欣",
+            "size":"E 罩杯",
+            "age": 20,
+            "height": "170cm"
+        }
+    ]
+  }
