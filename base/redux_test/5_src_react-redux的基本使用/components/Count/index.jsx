@@ -7,24 +7,24 @@ export default class Count extends Component {
 	//加法
 	increment = ()=>{
 		const {value} = this.selectNumber
-		this.props.jia(value*1)
+		this.props.add(value*1)
 	}
 	//减法
 	decrement = ()=>{
 		const {value} = this.selectNumber
-		this.props.jian(value*1)
+		this.props.sub(value*1)
 	}
 	//奇数再加
 	incrementIfOdd = ()=>{
 		const {value} = this.selectNumber
 		if(this.props.count % 2 !== 0){
-			this.props.jia(value*1)
+			this.props.add(value*1)
 		}
 	}
 	//异步加
 	incrementAsync = ()=>{
 		const {value} = this.selectNumber
-		this.props.jiaAsync(value*1,500)
+		this.props.addSync(value*1,500)
 	}
 
 	render() {
