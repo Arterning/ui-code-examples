@@ -1,5 +1,10 @@
 import React, { Component } from 'react'
-
+/**
+ * 这里引申出一个重要概念
+ * UI组件和容器组件
+ * 这里CountUI是UI组件
+ * 外面哪个是容器组件
+ */
 export default class Count extends Component {
 
 	state = {carName:'奔驰c63'}
