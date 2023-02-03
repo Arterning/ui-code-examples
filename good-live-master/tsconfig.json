@@ -1,0 +1,57 @@
+// {
+//   "compilerOptions": {
+//     "module": "esnext",
+//     "target": "esnext",
+//     "lib": ["esnext", "dom"],
+//     "baseUrl": ".",
+//     "jsx": "react-jsx",
+//     "resolveJsonModule": true,
+//     "allowSyntheticDefaultImports": true,
+//     "moduleResolution": "node",
+//     "forceConsistentCasingInFileNames": true,
+//     "noImplicitReturns": true,
+//     "suppressImplicitAnyIndexErrors": true,
+//     "noUnusedLocals": false,
+//     "allowJs": true,
+//     "skipLibCheck": true,
+//     "esModuleInterop": true,
+//     "strict": true,
+//     "noImplicitAny": false,
+//     "paths": {
+//       "@/*": ["./src/*"]
+//     },
+//     "noEmit": true
+//   },
+//   "include": [
+//     "src/**/*",
+//     "typings/**/*",
+//     "config/**/*",
+//     ".eslintrc.js",
+//     ".stylelintrc.js",
+//     ".prettierrc.js"
+//   ],
+//   "exclude": ["node_modules", "build", "dist"]
+// }
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "sourceMap": true,
+    "jsx": "react",
+    "outDir": "./build",
+    "baseUrl": ".",
+    "incremental": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "downlevelIteration": true,
+    "paths": {
+      "*": ["*"],
+      "@/*": ["./src/*"]
+    },
+    "lib": ["dom", "DOM.Iterable", "esnext"]
+  },
+  "exclude": ["node_modules", "dist"]
+}
