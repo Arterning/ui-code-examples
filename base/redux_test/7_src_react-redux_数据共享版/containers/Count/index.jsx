@@ -56,16 +56,17 @@ class Count extends Component {
 	}
 }
 
-//使用connect()()创建并暴露一个Count的容器组件
+const mapStateToProps = state => ({
+	count:state.sum,
+	renshu:state.persons.length
+});
+const mapDispatchToProps = {
+	jia:createIncrementAction,
+	jian:createDecrementAction,
+	jiaAsync:createIncrementAsyncAction,
+};
 export default connect(
-	state => ({
-		count:state.he,
-		renshu:state.rens.length
-	}),
-	{
-		jia:createIncrementAction,
-		jian:createDecrementAction,
-		jiaAsync:createIncrementAsyncAction,
-	}
+	mapStateToProps,
+	mapDispatchToProps
 )(Count)
 

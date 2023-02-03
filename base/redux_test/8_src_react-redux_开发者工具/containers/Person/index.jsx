@@ -33,7 +33,10 @@ class Person extends Component {
 	}
 }
 
+const mapStateToProps = state => ({yiduiren:state.rens,he:state.he});
+const mapDispathToProps = {jiaYiRen:createAddPersonAction};
+
 export default connect(
-	state => ({yiduiren:state.rens,he:state.he}),//映射状态
-	{jiaYiRen:createAddPersonAction}//映射操作状态的方法
+	mapStateToProps,
+	mapDispathToProps
 )(Person)

@@ -55,22 +55,34 @@ class Count extends Component {
 	}
 }
 
+const mapStateToProps = state => ({count:state});
+const mapDispatchToProps = dispatch => ({
+	jia:number => dispatch(createIncrementAction(number)),
+	jian:number => dispatch(createDecrementAction(number)),
+	jiaAsync:(number,time) => dispatch(createIncrementAsyncAction(number,time)),
+});
+
+
 //使用connect()()创建并暴露一个Count的容器组件
 export default connect(
-	state => ({count:state}),
-
-	//mapDispatchToProps的一般写法
-	/* dispatch => ({
-		jia:number => dispatch(createIncrementAction(number)),
-		jian:number => dispatch(createDecrementAction(number)),
-		jiaAsync:(number,time) => dispatch(createIncrementAsyncAction(number,time)),
-	}) */
-
-	//mapDispatchToProps的简写
-	{
-		jia:createIncrementAction,
-		jian:createDecrementAction,
-		jiaAsync:createIncrementAsyncAction,
-	}
+	mapStateToProps,
+	mapDispatchToProps
 )(Count)
 
+/* 
+
+const mapDispatchToProps = dispatch => ({
+	jia:number => dispatch(createIncrementAction(number)),
+	jian:number => dispatch(createDecrementAction(number)),
+	jiaAsync:(number,time) => dispatch(createIncrementAsyncAction(number,time)),
+}) 
+
+可以简写成如下形式
+
+const mapDispatchToProps = {
+	jia:createIncrementAction,
+	jian:createDecrementAction,
+	jiaAsync:createIncrementAsyncAction,
+};
+
+*/

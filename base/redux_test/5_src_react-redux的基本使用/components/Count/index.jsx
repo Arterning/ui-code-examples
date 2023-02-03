@@ -1,5 +1,10 @@
 import React, { Component } from 'react'
-
+/**
+ * 这里引申出一个重要概念
+ * UI组件和容器组件
+ * 这里CountUI是UI组件
+ * 外面哪个是容器组件
+ */
 export default class Count extends Component {
 
 	state = {carName:'奔驰c63'}
@@ -7,24 +12,24 @@ export default class Count extends Component {
 	//加法
 	increment = ()=>{
 		const {value} = this.selectNumber
-		this.props.jia(value*1)
+		this.props.add(value*1)
 	}
 	//减法
 	decrement = ()=>{
 		const {value} = this.selectNumber
-		this.props.jian(value*1)
+		this.props.sub(value*1)
 	}
 	//奇数再加
 	incrementIfOdd = ()=>{
 		const {value} = this.selectNumber
 		if(this.props.count % 2 !== 0){
-			this.props.jia(value*1)
+			this.props.add(value*1)
 		}
 	}
 	//异步加
 	incrementAsync = ()=>{
 		const {value} = this.selectNumber
-		this.props.jiaAsync(value*1,500)
+		this.props.addSync(value*1,500)
 	}
 
 	render() {
