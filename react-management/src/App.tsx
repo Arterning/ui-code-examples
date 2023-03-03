@@ -15,6 +15,7 @@ function App() {
 
   const outlet = useRoutes(route)
 
+  //outlet是路由埋入点
   return (
     <div className="App">
       {outlet}
