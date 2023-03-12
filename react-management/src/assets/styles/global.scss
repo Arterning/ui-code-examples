@@ -1,0 +1,24 @@
+$color: #fcf;
+body {
+    background-color: $color;
+
+    // disable text selection
+    user-select: none;
+}
+
+img {
+    //disable drag image
+    -webkit-user-drag: none;
+}
+
+
+//首页的布局样式
+.logo {
+    height: 32px;
+    margin: 16px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.site-layout .site-layout-background {
+    background: #fff;
+}
