@@ -1,3 +1,0 @@
-# About
-
-React demo example
